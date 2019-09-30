@@ -7,7 +7,8 @@ public class ServiceReservation implements IServiceReservation{
 
 	@Override
 	public void CreerReservation(Reservation reserv) {
-		// TODO Auto-generated method stub
+		// methode d'ajout d'une reservation
+		
 		
 	}
 
