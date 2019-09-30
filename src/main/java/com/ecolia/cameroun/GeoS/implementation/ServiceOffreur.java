@@ -16,7 +16,7 @@ public class ServiceOffreur implements IServiceOffreur{
 	OffreurRepository offrep;
 	@Override
 	public void CreerOffreur(Offreur offr) {
-		// TODO Auto-generated method stub
+		// methode de creation d'un nouveau offruer
 		
 		offrep.save(offr);
 		
