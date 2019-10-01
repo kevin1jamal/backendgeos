@@ -10,7 +10,7 @@ public interface IServiceOffreur {
 	
 	public void CreerOffreur(Offreur offr);
 	public void ModifierOffreur(Offreur offr);
-	public List <Offreur> AfficherOffreur();
+	public List <Offreur> AfficherOffreurs();
 	public void DesactiverOffreur(Offreur offr);
 	public Offreur getOneOffreur(Long idOffreur);
 	public List <Offreur> OffreurActif(); 

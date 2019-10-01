@@ -1,5 +1,7 @@
 package com.ecolia.cameroun.GeoS.implementation;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -42,5 +44,14 @@ public class ServicePartenaire implements IServicePartenaire{
 		return partrep.getOne(idPart);
 	
 	}
+
+	@Override
+	public List<Partenaire> AfficherPartenaires() {
+		// TODO Auto-generated method stub
+		
+		return partrep.findAll();
+	}
+
+	
 
 }

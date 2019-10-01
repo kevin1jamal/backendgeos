@@ -1,6 +1,5 @@
 package com.ecolia.cameroun.GeoS.service;
 
-import java.util.List;
 
 import com.ecolia.cameroun.GeoS.entity.Periode;
 

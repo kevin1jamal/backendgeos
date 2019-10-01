@@ -8,7 +8,7 @@ public interface IServicePublicite {
 	
 	public void CreerPub(Publicite pub);
 	public void ModifierPublicite(Publicite pub);
-	public void SupprimerPub(Publicite pub);
+	public void SupprimerPub(Long idPub);
 	
 
 }

@@ -1,5 +1,7 @@
 package com.ecolia.cameroun.GeoS.entity;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,7 +18,7 @@ public class Consultation {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Id
 	private Long idCons;
-	//private Date dateCons;
+	private Date dateCons;
 	//private Time heureCons;
 
 }

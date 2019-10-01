@@ -16,7 +16,7 @@ public class ServiceOffreur implements IServiceOffreur{
 	OffreurRepository offrep;
 	@Override
 	public void CreerOffreur(Offreur offr) {
-		// methode de creation d'un nouveau offruer
+		// methode de creation d'un nouvel offreur
 		
 		offrep.save(offr);
 		
@@ -31,7 +31,7 @@ public class ServiceOffreur implements IServiceOffreur{
 	}
 
 	@Override
-	public List<Offreur> AfficherOffreur() {
+	public List<Offreur> AfficherOffreurs() {
 		// TODO Auto-generated method stub
 		return offrep.findAll();
 	}
@@ -47,6 +47,7 @@ public class ServiceOffreur implements IServiceOffreur{
 	@Override
 	public Offreur getOneOffreur(Long idOffreur) {
 		// TODO Auto-generated method stub
+		
 		return offrep.getOne(idOffreur);
 	}
 
