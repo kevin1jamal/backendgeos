@@ -14,37 +14,53 @@ public class ServiceReservation implements IServiceReservation{
 
 	@Autowired
 	ReservationRepository reservrep;
+	
+	
+	/* 
+	 * Methode d'ajout d'une reservation
+	 */
 	@Override
 	public void CreerReservation(Reservation reserv) {
-		// methode d'ajout d'une reservation
-		
+	
 		reservrep.save(reserv);
 	}
 
+	
+	/* 
+	 * Methode de modification d'une reservation
+	 */
 	@Override
 	public void ModifierReservation(Reservation reserv) {
-		// TODO Auto-generated method stub
 		
 		reservrep.save(reserv);
 	}
 
+	
+	/* 
+	 * Methode d'affichage d'une reservation
+	 */
 	@Override
 	public Reservation getOneReservation(Long idRes) {
-		// TODO Auto-generated method stub
 		
 		return reservrep.getOne(idRes);
 	}
 
+	
+	/* 
+	 * Methode pour annuler une reservation
+	 */
 	@Override
 	public void AnnulerReservation(Long idRes) {
-		// TODO Auto-generated method stub
 		
 		reservrep.deleteById(idRes);
 	}
 
+	
+	/* 
+	 * Methode d'afficher la liste des reservations
+	 */
 	@Override
 	public List<Reservation> AfficherReservations() {
-		// TODO Auto-generated method stub
 		
 		return reservrep.findAll();
 	}

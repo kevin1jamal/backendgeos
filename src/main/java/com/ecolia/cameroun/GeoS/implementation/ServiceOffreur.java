@@ -14,46 +14,65 @@ public class ServiceOffreur implements IServiceOffreur{
 
 	@Autowired
 	OffreurRepository offrep;
+	
+	
+	/* 
+	 * Methode de creation d'un nouvel offreur
+	 */
 	@Override
 	public void CreerOffreur(Offreur offr) {
-		// methode de creation d'un nouvel offreur
 		
-		offrep.save(offr);
-		
+		offrep.save(offr);	
 	}
 
+	
+	/* 
+	 * Methode de modification d'un offreur
+	 */
 	@Override
 	public void ModifierOffreur(Offreur offr) {
-		// TODO Auto-generated method stub
 		
-		offrep.save(offr);
-		
+		offrep.save(offr);		
 	}
 
+	
+	/* 
+	 * Methode d'affichage de la liste des offreurs
+	 */
 	@Override
 	public List<Offreur> AfficherOffreurs() {
-		// TODO Auto-generated method stub
+		
 		return offrep.findAll();
 	}
 
+	
+	/* 
+	 * Methode de desactivation d'un offreur
+	 */
 	@Override
 	public void DesactiverOffreur(Offreur offr) {
-		// TODO Auto-generated method stub	
 		
 		offr.setIsactive(true);
 		offrep.save(offr);
 	}
 
+	
+	/* 
+	 * Methode d'affichage d'un offreur
+	 */
 	@Override
 	public Offreur getOneOffreur(Long idOffreur) {
-		// TODO Auto-generated method stub
 		
 		return offrep.getOne(idOffreur);
 	}
 
+	
+	/* 
+	 * Methode d'affichage de la liste des offreurs actifs
+	 */
 	@Override
 	public List<Offreur> OffreurActif() {
-		// TODO Auto-generated method stub
+		
 		return null;
 		//return offrep.findByIsActive();
 	}

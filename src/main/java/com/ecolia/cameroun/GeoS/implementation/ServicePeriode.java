@@ -12,30 +12,43 @@ public class ServicePeriode implements IServicePeriode{
 
 	@Autowired
 	PeriodeRepository periodrep;
+	
+	
+	/* 
+	 * Methode de creation d'une periode
+	 */
 	@Override
 	public void CreerPeriode(Periode per) {
-		// TODO Auto-generated method stub
 		
 		periodrep.save(per);
 	}
 
+	
+	/* 
+	 * Methode de modification d'une periode
+	 */
 	@Override
 	public void ModifierPeriode(Periode per) {
-		// TODO Auto-generated method stub
 		
 		periodrep.save(per);
 	}
 
+	
+	/* 
+	 * Methode d'affichage d'une periode
+	 */
 	@Override
 	public Periode getOnePeriode(Long idPer) {
-		// TODO Auto-generated method stub
 		
 		return periodrep.getOne(idPer);
 	}
 
+	
+	/* 
+	 * Methode pour annuler une periode
+	 */
 	@Override
 	public void SupprimerPeriode(Periode per) {
-		// TODO Auto-generated method stub
 		
 		periodrep.delete(per);
 	}

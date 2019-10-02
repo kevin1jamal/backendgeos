@@ -14,37 +14,48 @@ public class ServiceTypeServ implements IServiceTypeServ{
 
 	@Autowired
 	TypeServiceRepository typerep;
+	
+	/* 
+	 * Methode de creation d'un type de service
+	 */
 	@Override
 	public void CreerTypeServ(TypeService typeserv) {
-		// TODO Auto-generated method stub
 		
 		typerep.save(typeserv);
 	}
 
+	/* 
+	 * Methode de modification d'un type de service
+	 */
 	@Override
 	public void ModifierTypeServ(TypeService typeserv) {
-		// TODO Auto-generated method stub
 		
 		typerep.save(typeserv);
 	}
 
+	/* 
+	 * Methode d'affichage d'un type de service
+	 */
 	@Override
 	public TypeService getOneTypeServ(Long idTypeServ) {
-		// TODO Auto-generated method stub
 		
 		return typerep.getOne(idTypeServ);
 	}
 
+	/* 
+	 * Methode de suppression d'un type de service
+	 */
 	@Override
 	public void SupprimerTypeServ(Long idTypeServ) {
-		// TODO Auto-generated method stub
 		
 		typerep.deleteById(idTypeServ);
 	}
 
+	/* 
+	 * Methode d'affichage de la liste des types de services
+	 */
 	@Override
 	public List<TypeService> AllTypeServices() {
-		// TODO Auto-generated method stub
 		
 		return typerep.findAll();
 	}

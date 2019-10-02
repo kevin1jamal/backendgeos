@@ -14,25 +14,33 @@ public class ServiceEvenement implements IServiceEvenement{
 
 	@Autowired
 	EvenementRepository evrep;
+	
+	
+	/* 
+	 * Methode de creation d'un evenement
+	 */
 	@Override
 	public void CreerEv(Evenement ev) {
-		// TODO Auto-generated method stub
 
 		evrep.save(ev);	
 	}
 
 
+	/* 
+	 * Methode d'affichage de la liste des evenements
+	 */
 	@Override
 	public List<Evenement> AfficherEvenements() {
-		// TODO Auto-generated method stub
 		
 		return evrep.findAll();
 	}
 
 
+	/* 
+	 * Methode d'affichage d'un evenement
+	 */
 	@Override
 	public Evenement getOneEvent(Long idEv) {
-		// TODO Auto-generated method stub
 		
 		return evrep.getOne(idEv);
 	}

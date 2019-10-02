@@ -14,37 +14,53 @@ public class ServiceServ implements IServiceServ{
 
 	@Autowired
 	ServicesRepository servrep;
+	
+	
+	/* 
+	 * Methode de creation d'un service
+	 */
 	@Override
 	public void CreerServ(Services serv) {
-		// TODO Auto-generated method stub
 		
 		servrep.save(serv);
 	}
 
+	
+	/* 
+	 * Methode de modification d'un service
+	 */
 	@Override
 	public void ModifierServ(Services serv) {
-		// TODO Auto-generated method stub
 		
 		servrep.save(serv);
 	}
 
+	
+	/* 
+	 * Methode d'affichage d'un service
+	 */
 	@Override
-	public Services getOneOffreur(Long idServ) {
-		// TODO Auto-generated method stub
+	public Services getOneService(Long idServ) {
 		
 		return servrep.getOne(idServ);
 	}
 
+	
+	/* 
+	 * Methode de suppression d'un service
+	 */
 	@Override
 	public void SupprimerServ(Long idServ) {
-		// TODO Auto-generated method stub
 		
 		servrep.deleteById(idServ);
 	}
 
+	
+	/* 
+	 * Methode d'affichage de la liste des services
+	 */
 	@Override
 	public List<Services> AfficherServices() {
-		// TODO Auto-generated method stub
 		
 		return servrep.findAll();
 	}

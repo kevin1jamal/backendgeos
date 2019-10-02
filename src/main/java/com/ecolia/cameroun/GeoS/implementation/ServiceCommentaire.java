@@ -10,9 +10,14 @@ public class ServiceCommentaire implements IServiceCommentaire{
 
 	@Autowired
 	CommentaireRepository commrep;
+	
+	/* 
+	 * Methode pour commenter ou faire des remarques sur le service
+	 */
+	
 	@Override
 	public void faireCommentaire(Commentaires comm) {
-		// TODO Auto-generated method stub
+		
 		commrep.save(comm);
 		
 	}

@@ -16,31 +16,41 @@ public class ServiceConsultation implements IServiceConsultation{
 
 	@Autowired
 	ConsultationRepository consrep;
+	
+	/* 
+	 * Methode de creation d'une consultation
+	 */
 	@Override
 	public void CreerCons(Consultation cons) {
-		// TODO Auto-generated method stub
 		
 		consrep.save(cons);	
 	}
 
+	/* 
+	 * Methode pour lister l'ensemle des consultations
+	 */
 	@Override
 	public List<Consultation> getAllCons() {
-		// TODO Auto-generated method stub
 		
 		return consrep.findAll();
 	}
 
+	/* 
+	 * Methode d'affichage de la liste des consultations par date
+	 */
 	@Override
 	public List <Consultation> AfficherConsDate(Date dateCons) {
-		// TODO Auto-generated method stub
 		
 		return null;
 		//return consrep.findByDate(dateCons);
 	}
 
+	/* 
+	 * Methode d'affichage de la liste des consultations par période
+	 */
 	@Override
 	public List<Consultation> AfficherConsPer(Long idCons) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 	

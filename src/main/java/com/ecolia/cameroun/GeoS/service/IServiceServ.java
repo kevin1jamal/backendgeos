@@ -8,7 +8,7 @@ public interface IServiceServ {
 	
 	public void CreerServ(Services serv);
 	public void ModifierServ(Services serv);
-	public Services getOneOffreur(Long idServ);
+	public Services getOneService(Long idServ);
 	public void SupprimerServ(Long idServ);
 	public List <Services> AfficherServices();
 

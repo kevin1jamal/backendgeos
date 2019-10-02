@@ -14,29 +14,42 @@ public class ServiceMenu implements IServiceMenu{
 
 	@Autowired
 	MenuRepository menurep;
+	
+	
+	/* 
+	 * Methode de creation d'un menu
+	 */
 	@Override
 	public void CreerMenu(Menu menu) {
-		// TODO Auto-generated method stub
 	
 		menurep.save(menu);
 	}
 
+	
+	/* Methode de mise à jour du menu
+	 */
 	@Override
 	public void MettreAJour(Menu menu) {
-		// TODO Auto-generated method stub
 		
 		menurep.save(menu);
 	}
 
+	
+	/* 
+	 * Methode d'affichage du menu
+	 */
 	@Override
 	public Menu AfficherMenu(Long idMenu) {
-		// TODO Auto-generated method stub
+		
 		return menurep.getOne(idMenu);
 	}
 
+	
+	/* 
+	 * Methode pour lister tous les menus
+	 */
 	@Override
 	public List<Menu> getAllMenu() {
-		// TODO Auto-generated method stub
 		
 		return menurep.findAll();
 	}

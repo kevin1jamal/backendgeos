@@ -14,55 +14,78 @@ public class ServiceOffre implements IServiceOffre{
 
 	@Autowired
 	OffreRepository offrerep;
+	
+	
+	/* 
+	 * Methode de creation d'une Offre
+	 */
 	@Override
 	public void CreerOffre(Offre offre) {
-		// TODO Auto-generated method stub
 		
 		offrerep.save(offre);
 	}
 
+	
+	/* 
+	 * Methode de modification d'une offre
+	 */
 	@Override
 	public void ModifierOffre(Offre offre) {
-		// TODO Auto-generated method stub
 		
 		offrerep.save(offre);
 	}
 
+	
+	/* 
+	 * Methode pour annuler une offre
+	 */
 	@Override
 	public void SupprimerOffre(Long idOffre) {
-		// TODO Auto-generated method stub
 		
 		offrerep.deleteById(idOffre);
 	}
 
+	
+	/* 
+	 * Methode d'affichage d'une offre
+	 */
 	@Override
 	public Offre AfficherOffre(Long idOffre) {
-		// TODO Auto-generated method stub
 		
 		return offrerep.getOne(idOffre);
 	}
 
+	
+	/* 
+	 * Methode pour Lister toutes les offres
+	 */
 	@Override
 	public List<Offre> ListOffres() {
-		// TODO Auto-generated method stub
 		
 		return offrerep.findAll();
 	}
 
+	
+	/* 
+	 * Methode de reservation d'une offre
+	 */
 	@Override
 	public void ReserverOffre(Offre offre) {
-		// TODO Auto-generated method stub
 		
 		
 	}
 
+	
+	 
 	/*
+	 * Methode d'affichage de la note d'une offre de services
+	 */
+/*
 	@Override
 	public void AfficherNote(Double note) {
-		// TODO Auto-generated method stub
 		
 	
 	}
-
+	
 */
 }

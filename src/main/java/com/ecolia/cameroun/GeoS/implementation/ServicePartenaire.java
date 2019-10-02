@@ -14,40 +14,56 @@ public class ServicePartenaire implements IServicePartenaire{
 
 	@Autowired
 	PartenaireRepository partrep;
+	
+	
+	/* 
+	 * Methode de creation d'un partenaire
+	 */
 	@Override
 	public void CreerPart(Partenaire part) {
-		// TODO Auto-generated method stub
 				
 		partrep.save(part);
 		
 	}
 
+	
+	/* 
+	 * Methode de modification d'un partenaire
+	 */
 	@Override
 	public void ModifierPart(Partenaire part) {
-		// TODO Auto-generated method stub
 		
 		partrep.save(part);
 	}
 
+	
+	/* 
+	 * Methode de suppression d'un partenaire
+	 */
 	@Override
 	public void SupprimerPart(Partenaire part) {
-		// TODO Auto-generated method stub
 		
 		partrep.delete(part);
 		
 	}
 
+	
+	/* 
+	 * Methode d'affichage d'un partenaire
+	 */
 	@Override
 	public Partenaire getOnePart(Long idPart) {
-		// TODO Auto-generated method stub
 		
 		return partrep.getOne(idPart);
 	
 	}
 
+	
+	/* 
+	 * Methode d'affichage de la liste des partenaires
+	 */
 	@Override
 	public List<Partenaire> AfficherPartenaires() {
-		// TODO Auto-generated method stub
 		
 		return partrep.findAll();
 	}

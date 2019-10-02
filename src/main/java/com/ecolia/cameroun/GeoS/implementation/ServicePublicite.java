@@ -12,23 +12,32 @@ public class ServicePublicite implements IServicePublicite{
 
 	@Autowired
 	PubliciteRepository pubrep;
+	
+	
+	/* 
+	 * Methode de creation d'une publicite
+	 */
 	@Override
 	public void CreerPub(Publicite pub) {
-		// TODO Auto-generated method stub
 		
 		pubrep.save(pub);
 	}
 
+	
+	/* Methode de modification d'une publicite
+	 */
 	@Override
 	public void ModifierPublicite(Publicite pub) {
-		// TODO Auto-generated method stub
 		
 		pubrep.save(pub);
 	}
 
+	
+	/* 
+	 * Methode de suppression d'une publicite
+	 */
 	@Override
 	public void SupprimerPub(Long idPub) {
-		// TODO Auto-generated method stub
 		
 		pubrep.deleteById(idPub);
 	}
